@@ -1,0 +1,54 @@
+<!doctype html>
+
+#TEST NOTE#
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>System Identity — Calibration Tests</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section>
+      <h2>Test 1 — Sigil Seed</h2>
+      <canvas id="test1" width="500" height="300"></canvas>
+      <p class="caption">
+        What rule/mechanism is being tested: That the sigil is a repeatable shape system, not a fixed drawing — built from a circle and a line through it, using x/y/size variables so it can be redrawn at any position or scale.<br>
+        What input controls it: None — this is a static form test with no user interaction.<br>
+        What I adjusted after seeing it run: [fill in — did you change the size, add another line, change proportions?]
+      </p>
+    </section>
+
+    <section>
+      <h2>Test 2 — Behavior Rule</h2>
+      <canvas id="test2" width="500" height="300"></canvas>
+      <p class="caption">
+        What rule/mechanism is being tested: The sigil resists calm and fractures under speed — it holds a steady, near-circular shape at rest and grows larger and more jagged the faster the cursor moves.<br>
+        What input controls it: Cursor movement speed, measured as the distance moved between animation frames.<br>
+        What I adjusted after seeing it run: [fill in — did you change the jitter amount, the smoothing rate, the max size cap, or the number of spikes?]
+      </p>
+    </section>
+
+    <section>
+      <h2>Test 3 — Gesture Language</h2>
+      <canvas id="test3" width="500" height="300"></canvas>
+      <p class="caption">
+        What rule/mechanism is being tested: The image only trusts patience — it fades into view gradually under slow, sustained cursor movement, and retreats quickly back to hidden the moment the cursor moves fast.<br>
+        What input controls it: Cursor movement speed, split into a slow threshold (reveals) and a fast threshold (hides), with a neutral middle zone that holds steady.<br>
+        What I adjusted after seeing it run: [fill in — did you change the reveal speed (0.01), the hide speed (0.08), or the threshold numbers?]
+      </p>
+    </section>
+
+    <section>
+      <h2>Test 4 — Atmosphere Constraint</h2>
+      <canvas id="test4" width="500" height="300"></canvas>
+      <p class="caption">
+        What rule/mechanism is being tested: A vignette — the edges of the frame fade to black, drawing focus inward and giving the sigil a sense of isolation, like it's being watched from the dark rather than displayed openly.<br>
+        What input controls it: None — this is a static atmospheric effect with no user interaction.<br>
+        What I adjusted after seeing it run: [fill in — did you change the gradient's inner/outer radius, or the shape/size of the circle in the middle?]
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
