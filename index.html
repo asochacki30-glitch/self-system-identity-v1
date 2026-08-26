@@ -1,53 +1,39 @@
 <!doctype html>
-
-#TEST NOTE#
 <html>
   <head>
     <meta charset="utf-8">
-    <title>System Identity — Calibration Tests</title>
+    <title>Self as System — Build v1</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-    <section>
-      <h2>Test 1 — Sigil Seed</h2>
-      <canvas id="test1" width="500" height="300"></canvas>
-      <p class="caption">
-        What rule/mechanism is being tested: That the sigil is a repeatable shape system, not a fixed drawing — built from a circle and a line through it, using x/y/size variables so it can be redrawn at any position or scale.<br>
-        What input controls it: None — this is a static form test with no user interaction.<br>
-        What I adjusted after seeing it run: [fill in — did you change the size, add another line, change proportions?]
-      </p>
-    </section>
+    <div class="panel">
+      <h1>[YOUR SYSTEM NAME HERE]</h1>
 
-    <section>
-      <h2>Test 2 — Behavior Rule</h2>
-      <canvas id="test2" width="500" height="300"></canvas>
-      <p class="caption">
-        What rule/mechanism is being tested: The sigil resists calm and fractures under speed — it holds a steady, near-circular shape at rest and grows larger and more jagged the faster the cursor moves.<br>
-        What input controls it: Cursor movement speed, measured as the distance moved between animation frames.<br>
-        What I adjusted after seeing it run: [fill in — did you change the jitter amount, the smoothing rate, the max size cap, or the number of spikes?]
-      </p>
-    </section>
+      <h3>Rules</h3>
+      <ul>
+        <li>The sigil grows and fractures the faster the cursor moves.</li>
+        <li>The sigil only reveals itself under slow, sustained movement, and hides under fast movement.</li>
+      </ul>
 
-    <section>
-      <h2>Test 3 — Gesture Language</h2>
-      <canvas id="test3" width="500" height="300"></canvas>
-      <p class="caption">
-        What rule/mechanism is being tested: The image only trusts patience — it fades into view gradually under slow, sustained cursor movement, and retreats quickly back to hidden the moment the cursor moves fast.<br>
-        What input controls it: Cursor movement speed, split into a slow threshold (reveals) and a fast threshold (hides), with a neutral middle zone that holds steady.<br>
-        What I adjusted after seeing it run: [fill in — did you change the reveal speed (0.01), the hide speed (0.08), or the threshold numbers?]
-      </p>
-    </section>
+      <h3>Controls</h3>
+      <p>Move your cursor over the canvas. Move slowly to reveal the sigil. Move quickly to make it retreat and fracture.</p>
 
-    <section>
-      <h2>Test 4 — Atmosphere Constraint</h2>
-      <canvas id="test4" width="500" height="300"></canvas>
-      <p class="caption">
-        What rule/mechanism is being tested: A vignette — the edges of the frame fade to black, drawing focus inward and giving the sigil a sense of isolation, like it's being watched from the dark rather than displayed openly.<br>
-        What input controls it: None — this is a static atmospheric effect with no user interaction.<br>
-        What I adjusted after seeing it run: [fill in — did you change the gradient's inner/outer radius, or the shape/size of the circle in the middle?]
+      <h3>v1 Reflection</h3>
+      <p>
+        Across my four tests, the two behaviors I'm keeping are Test 2, where the sigil fractures and grows the faster the cursor moves, and Test 3, where the sigil reveals itself under slow movement and hides under fast movement. Both felt readable right away and gave the system a clear sense of tension between calm and speed. I'm cutting Test 1, the static circle-and-line sigil, since on its own it didn't do anything — it only became interesting once it was reacting to motion in Tests 2 and 3. The one I want to tighten is Test 4, the vignette, since right now it's just a fixed dark edge with no real rule behind it; I want to define clearer limits for how and when it changes, rather than it just sitting there unchanged the whole time.
       </p>
-    </section>
+    </div>
+
+    <canvas id="mainCanvas" width="600" height="400"></canvas>
+
+    <div class="panel">
+      <h3>End of Build Reflection</h3>
+      <p><strong>What can it do now that the tests couldn't?</strong> [fill in]</p>
+      <p><strong>What feels most "you" about the behavior?</strong> [fill in]</p>
+      <p><strong>Where does it drift into generic or noisy?</strong> [fill in]</p>
+      <p><strong>What will you change in v2?</strong> [fill in]</p>
+    </div>
 
     <script src="script.js"></script>
   </body>
