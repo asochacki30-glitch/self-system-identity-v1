@@ -29,10 +29,10 @@
 
     <div class="panel">
       <h3>End of Build Reflection</h3>
-      <p><strong>What can it do now that the tests couldn't?</strong> [fill in]</p>
-      <p><strong>What feels most "you" about the behavior?</strong> [fill in]</p>
-      <p><strong>Where does it drift into generic or noisy?</strong> [fill in]</p>
-      <p><strong>What will you change in v2?</strong> [fill in]</p>
+      <p><strong>What can it do now that the tests couldn't?</strong> In the tests, each behavior lived in its own isolated canvas, reacting to its own separate input. Now the sigil holds two behaviors at once, driven by a single shared input — cursor speed — so the system reads as one coherent thing responding to one gesture, instead of four unrelated demos sitting next to each other.</p>
+      <p><strong>What feels most "you" about the behavior?</strong> The way it punishes fast, careless movement and only rewards patience feels the most deliberate. It doesn't respond evenly to any input — it has a clear preference for stillness and calm, and reacts sharply the moment that's broken.</p>
+      <p><strong>Where does it drift into generic or noisy?</strong> The jagged, spiky shape at high speed is the part that risks feeling generic — "shape gets messy when you move the mouse fast" is a fairly common effect, and right now it doesn't yet feel specific to this system versus any other reactive sketch.</p>
+      <p><strong>What will you change in v2?</strong> I want to replace the generic jitter/spike effect with something more specific to this system's identity — for example, the sigil breaking into a fixed number of pieces that scatter and have to reassemble during stillness, rather than just becoming visually noisy.</p>
     </div>
 
     <script src="script.js"></script>
