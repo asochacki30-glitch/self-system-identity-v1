@@ -7,9 +7,12 @@
   </head>
   <body>
 
-    <div class="panel">
+    <header class="site-header">
+      <p class="eyebrow">Self as System / Build v1</p>
       <h1>[YOUR SYSTEM NAME HERE]</h1>
+    </header>
 
+    <div class="panel">
       <h3>Rules</h3>
       <ul>
         <li>The sigil grows and fractures the faster the cursor moves.</li>
@@ -18,14 +21,19 @@
 
       <h3>Controls</h3>
       <p>Move your cursor over the canvas. Move slowly to reveal the sigil. Move quickly to make it retreat and fracture.</p>
+    </div>
 
+    <div class="canvas-frame">
+      <canvas id="mainCanvas" width="600" height="400"></canvas>
+    </div>
+    <p class="canvas-caption" style="margin-top: -24px; margin-bottom: 40px;">LIVE SYSTEM — RESPONDS TO CURSOR</p>
+
+    <div class="panel">
       <h3>v1 Reflection</h3>
       <p>
         Across my four tests, the two behaviors I'm keeping are Test 2, where the sigil fractures and grows the faster the cursor moves, and Test 3, where the sigil reveals itself under slow movement and hides under fast movement. Both felt readable right away and gave the system a clear sense of tension between calm and speed. I'm cutting Test 1, the static circle-and-line sigil, since on its own it didn't do anything — it only became interesting once it was reacting to motion in Tests 2 and 3. The one I want to tighten is Test 4, the vignette, since right now it's just a fixed dark edge with no real rule behind it; I want to define clearer limits for how and when it changes, rather than it just sitting there unchanged the whole time.
       </p>
     </div>
-
-    <canvas id="mainCanvas" width="600" height="400"></canvas>
 
     <div class="panel">
       <h3>End of Build Reflection</h3>

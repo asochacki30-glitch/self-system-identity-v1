@@ -1,30 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --bg: #0a0e1a;
+  --panel: #111a2e;
+  --border: #25314d;
+  --text: #c7d0e0;
+  --muted: #6b7891;
+  --accent: #5ec8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #0d0d0d;
-  color: #cccccc;
-  font-family: sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0 20px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
-  padding: 60px 20px;
 }
 
-canvas {
-  background-color: #000000;
-  border: 1px solid #333333;
+/* ---- Header ---- */
+
+.site-header {
+  width: 100%;
+  max-width: 640px;
+  padding: 60px 0 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
 }
 
-.caption {
-  max-width: 500px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #999999;
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
 }
 
-h2 {
-  font-weight: normal;
+.site-header h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ---- Panels / cards ---- */
+
+.panel {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.panel h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.panel h3:not(:first-child) {
+  margin-top: 26px;
+}
+
+.panel p, .panel li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+.panel ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.panel li {
+  margin-bottom: 6px;
+}
+
+.panel p + p {
+  margin-top: 14px;
+}
+
+.panel strong {
   color: #ffffff;
+  font-weight: 500;
+}
+
+/* ---- Canvas viewport frame ---- */
+
+.canvas-frame {
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.canvas-frame canvas {
+  display: block;
+  width: 100%;
+  background-color: #000000;
+  border: 1px solid var(--border);
+}
+
+/* Corner brackets, like a viewfinder/instrument readout */
+.canvas-frame::before,
+.canvas-frame::after,
+.canvas-frame .corner-tl,
+.canvas-frame .corner-br {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--accent);
+  border-style: solid;
+}
+
+.canvas-frame::before {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.canvas-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+.canvas-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
 }
