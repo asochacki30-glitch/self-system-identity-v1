@@ -6,4 +6,4 @@ A gesture-driven system where cursor speed controls a drawing's character: slow,
 Move your cursor slowly across the canvas to draw soft curves. Move quickly to break the drawing into sharp geometric fragments.
 
 ## Live version
-[link goes here once deployed]
+https://geometriccircle.netlify.app/
